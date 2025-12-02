@@ -26,18 +26,31 @@
     <section class="auth-section">
         <div class="auth-container">
             <div class="auth-box">
-                <h2>Login</h2>
+                <h2>Welcome Back!</h2>
+                <p class="auth-subtitle">Login to your account</p>
 
-                <form class="auth-form">
+                <form class="auth-form" id="loginForm">
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" id="loginEmail" placeholder="Email Address" required>
+                        <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe"> Remember me
+                        </label>
                     </div>
 
                     <button type="submit" class="auth-btn">Login</button>
+                    
+                    <div class="success-message" id="loginSuccess" style="display: none;">
+                        ✅ Login successful! Redirecting...
+                    </div>
                 </form>
 
                 <p class="auth-switch">
@@ -46,5 +59,7 @@
             </div>
         </div>
     </section>
+    
+    <script src="js/auth.js"></script>
 </body>
 </html>

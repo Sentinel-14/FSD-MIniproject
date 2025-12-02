@@ -26,26 +26,42 @@
     <section class="auth-section">
         <div class="auth-container">
             <div class="auth-box">
-                <h2>Sign Up</h2>
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">Join Fashionista today!</p>
 
-                <form class="auth-form">
+                <form class="auth-form" id="signupForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <span class="error-message" id="nameError"></span>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" id="signupEmail" placeholder="Email Address" required>
+                        <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="signupPassword" placeholder="Password (min 6 chars)" required>
+                        <span class="error-message" id="passwordError"></span>
+                        <div class="password-strength" id="passwordStrength"></div>
                     </div>
 
                     <div class="form-group">
-                        <input type="password" placeholder="Confirm Password" required>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <span class="error-message" id="confirmError"></span>
                     </div>
 
-                    <button type="submit" class="auth-btn">Sign Up</button>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="agreeTerms" required> I agree to Terms & Conditions
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Create Account</button>
+                    
+                    <div class="success-message" id="signupSuccess" style="display: none;">
+                        ✅ Account created! Redirecting to login...
+                    </div>
                 </form>
 
                 <p class="auth-switch">
@@ -54,5 +70,7 @@
             </div>
         </div>
     </section>
+    
+    <script src="js/auth.js"></script>
 </body>
 </html>
